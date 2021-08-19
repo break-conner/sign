@@ -1,0 +1,72 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Wellcome</title>
+    <link rel="stylesheet" th:href="@{/static/css/login3.css}"/>
+    <script th:src="@{/static/js/jquery-3.2.1.js}"></script>
+    <script th:src="@{/static/js/login3switch.js}"></script>
+    <script th:src="@{/static/js/login3login.js}"></script>
+</head>
+
+<body>
+<div class="continer">
+    <div class="panel">
+        <div class="imgs"></div>
+        <div class="forms">
+            <div class="top">
+                <span>Insert Your Title Here</span>
+                <div id="msgdiv"><msg id="msg"></msg></div>
+            </div>
+            <div class="center">
+                <div id="loginpanel" class="loginpanelswitch">
+                    <h2>Sign In</h2>
+                    <div>
+                        <input type="text" id="loginuser">
+                        <span id="loginusername" >Username</span>
+                    </div>
+                    <div>
+                        <input type="password" id="loginpwd">
+                        <span id="loginuserpwd">Password</span>
+                    </div>
+                    <div>
+                        <button id = "signin">Sign In</button>
+                    </div>
+                </div>
+                <div id="registerpanel" class="registerpanelswitch">
+                    <h2>Sign Up</h2>
+                    <div>
+                        <input type="text" id="registeruser">
+                        <span id="registerusername">Username</span>
+                    </div>
+                    <div>
+                        <input type="text" id="registerpwd">
+                        <span id="registeruserpwd">Password</span>
+                    </div>
+                    <div>
+                        <input type="text" id="registerrepwd">
+                        <span id="registeruserrepwd">RePassword</span>
+                    </div>
+                    <div>
+                        <input type="text" id="registeremial">
+                        <span id="registeruseremail">Email</span>
+                    </div>
+                    <div>
+                        <button>Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+					<span id="logintoregister">
+						if you don't have the account <pro id="toup">click here</pro><br>
+						if you have account <pro id="toin">click here</pro>
+					</span>
+                <span>
+						i don't know what i want to write here
+					</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

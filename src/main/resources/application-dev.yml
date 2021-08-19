@@ -1,0 +1,46 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /rin_start
+spring:
+  datasource:
+    username: rinadmin
+    password: Rin123!@#
+    url: jdbc:mysql://rm-uf64ok4na2desp0115o.mysql.rds.aliyuncs.com:3306/RinLogin?serverTimezone=UTC&useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEnciding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    #指定阿里巴巴德鲁伊连接池,否则会默认使用Hikari连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialization-mode: always
+    druid:
+      # 连接池配置
+      # 配置初始化大小、最小、最大
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      # 配置获取连接等待超时的时间
+      max-wait: 3000
+      validation-query: SELECT 1 FROM DUAL
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      pool-prepared-statements: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      filters: stat,wall,slf4j
+      # 配置web监控,默认配置也和下面相同(除用户名密码，enabled默认false外)，其他可以不配
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: root
+        allow: 127.0.0.1
+  application:
+    name: rin_sso_sign_in
+#配置mybatis-plus相关
+mybatis-plus:
+  mapper-locations: classpath:mybatisconf/mappers/*mappers.xml
+#  config-location: classpath:mybatisconf/mybatis*.xml

@@ -1,0 +1,286 @@
+/* CSS Document */
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+/*	background: #D000FF;*/
+}
+div.continer{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+div.panel{
+	width: 70%;
+	height: 70%;
+	background: rgba(255,255,255,0.37);
+	box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.37);
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	border-radius: 10px;
+}
+div.imgs{
+	width: 70%;
+	height: 100%;
+	background: #0865B1;
+}
+div.forms{
+	width: 30%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+div.top{
+	width: 100%;
+	height: 30%;
+/*	background: #00FFCB;*/
+	font-size: 2.2rem;
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	position: relative;
+}
+div.top>div#msgdiv{
+	position: absolute;
+	top: 80%;
+	font-size: 1.0rem;
+}
+#msg{
+	margin-left: 0px;
+}
+div.bottom{
+	width: 100%;
+	height: 20%;
+/*	background: #06C1B3;*/
+	text-align: center;
+	position: relative;
+}
+div.bottom span{
+	position: absolute;
+	bottom: 0;
+	right: 11%;
+}
+div.center{
+	width: 100%;
+	height: 50%;
+/*
+	display: flex;
+	flex-direction: row;
+*/
+	overflow: hidden;
+	position: relative;
+}
+/*login和register切换样式*/
+div.loginpanelswitch{
+/*	width: 403.19px;*/
+	width: 100%;
+	height: 100%;
+	transition: .6s;
+	text-align:center;
+	position: absolute;
+	left: 0%;
+}
+div.registerpanelswitch{
+/*	width: 403.19px;*/
+	width: 100%;
+	height: 100%;
+	transition: .6s;
+	text-align:center;
+	position: absolute;
+	left: 100%;
+}
+
+div.loginpanelafterswitch{
+	width: 100%;
+	height: 100%;
+	transition: .6s;
+	text-align:center;
+	position: absolute;
+	left: -100%;
+}
+div.registerpanelafterswitch{
+	width: 100%;
+	height: 100%;
+	transition: .6s;
+	text-align:center;
+	position: absolute;
+	left: 0%;
+}
+
+
+/*login内部样式*/
+#loginpanel h2,button{
+	margin-top: 3vh;
+}
+#loginpanel button{
+	font-size: 1.3rem;
+	outline: none;
+	width: 9vw;
+	height: 4vh;
+	border-radius: 50px;
+	border:none;
+	background: skyblue;
+	cursor: pointer;
+}
+
+#loginpanel input{
+	line-height: 5vh;
+	height: 3vh;
+	border: none;
+	border-bottom: 2px solid #0044FF;
+	outline: none;
+	background: none;
+	font-size: 1.4rem;
+	margin-top: 3vh;
+}
+#loginpanel div{
+	position: relative;
+}
+#loginpanel div>span{
+	position: absolute;
+	left: 4vw;
+	margin-top: 3vh;
+	font-size: 1.4rem;
+	transition: .5s all;
+}
+
+
+/*login内部样式*/
+#registerpanel input{
+	line-height: 4vh;
+	height: 3vh;
+	border: none;
+	border-bottom: 2px solid #073AFF;
+	outline: none;
+	background: none;
+	font-size: 1.4rem;
+	margin-top: 1.5vh;
+}
+#registerpanel div{
+	position: relative;
+}
+#registerpanel div>span{
+	position: absolute;
+	left: 4vw;
+	margin-top: 1.5vh;
+	font-size: 1.4rem;
+	transition: .6s all;
+}
+#registerpanel h2,button{
+	margin-top: 3vh;
+}
+#registerpanel button{
+	font-size: 1.3rem;
+	outline: none;
+	width: 9vw;
+	height: 4vh;
+	border-radius: 50px;
+	border:none;
+	background: skyblue;
+	cursor: pointer;
+}
+
+/*底部提示语样式*/
+#logintoregister{
+	position: absolute;
+	top: 5px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+pro{
+	color: blueviolet;
+}
+#logintoregister>pro:hover{
+	color: purple;
+	cursor: pointer;
+}
+
+/*输入框标语样式*/
+#loginusername.after{
+	font-size: 1.2rem;
+	margin-top: 1vh;
+	transition: .4s all;
+	margin-left: -0.7vw;
+	color: black;
+}
+#loginuserpwd.after{
+	font-size: 1.2rem;
+	margin-top: 1vh;
+	transition: .6s all;
+	margin-left: -0.7vw;
+	color: black;
+}
+
+#registerusername.after{
+	font-size: 1.1rem;
+	margin-top: -0.3vh;
+	transition: .6s all;
+	margin-left: -0.7vw;
+	color: black;
+}
+#registeruserpwd.after{
+	font-size: 1.1rem;
+	margin-top: -0.3vh;
+	transition: .6s all;
+	margin-left: -0.7vw;
+	color: black;
+}
+#registeruserrepwd.after{
+	font-size: 1.1rem;
+	margin-top: -0.3vh;
+	transition: .6s all;
+	margin-left: -0.7vw;
+	color: black;
+}
+#registeruseremail.after{
+	font-size: 1.1rem;
+	margin-top: -0.3vh;
+	transition: .6s all;
+	margin-left: -0.7vw;
+	color: black;
+}
+
+/*综合样式*/
+button:hover{
+	background: #0862CF;
+	color: aliceblue;
+}
+
+/*错误信息执行的样式*/
+@-webkit-keyframes shakeanime{
+	0%{left: 4.2vw}
+	25%{left: 3.8vw}
+	50%{left: 4.1vw}
+	75%{left: 3.9vw}
+	100%{left: 4vw}
+}
+@-webkit-keyframes msgshakeanime{
+	0%{margin-left: 15px;}
+	25%{margin-left: -15px;}
+	50%{margin-left: 7px;}
+	75%{margin-left: -7px;}
+	100%{margin-left: 0px;}
+}
+.shakeanimate{
+	-webkit-animation-name: "shakeanime"; /*动画名称，需要跟@keyframes定义的名称一致*/
+	-webkit-animation-duration: .3s;/*动画持续的时间长*/
+	-webkit-animation-iteration-count: 2;/*动画循环播放的次数-infinite无限次 可取数值*/
+	-webkit-animation-delay: .4s;
+}
+.msgshakeanimate{
+	-webkit-animation-name: "msgshakeanime"; /*动画名称，需要跟@keyframes定义的名称一致*/
+	-webkit-animation-duration: .3s;/*动画持续的时间长*/
+	-webkit-animation-iteration-count: 2;/*动画循环播放的次数-infinite无限次 可取数值*/
+	-webkit-animation-delay: .2s;
+}
